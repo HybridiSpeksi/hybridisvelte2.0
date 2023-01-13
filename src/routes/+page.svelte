@@ -5,7 +5,10 @@
 
     let text = documentToHtmlString(data.pages[0].blocksCollection.items[0].content.json)
 </script>
-
+<svelte:head>
+    <title>HybridiSpeksi</title>
+    <meta name="description" content="HybridiSpeksi on Turun yliopiston luonnontieteiden ja tekniikan opiskelijoiden vuosittain toteuttama teatteriproduktio." />
+</svelte:head>
 <!-- <section class="starfield">
 	<div class="welcome">
 		<img src="gold_logo.png" alt="Welcome" draggable=false />

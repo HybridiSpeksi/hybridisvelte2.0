@@ -94,7 +94,6 @@
             </button>            
         </li>
         <li class="fullwidth is-hidden" id="quickview-{speksi.year}">
-            <!-- <button type="button" data-close>Close 2</button> -->
             <Speksi {speksi}/>
         </li>
         {/each}
