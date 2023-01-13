@@ -1,7 +1,6 @@
 <script>
 	import './nav.scss';
-    import {     
-        Styles,
+    import {
         Collapse,
         Navbar,
         NavbarToggler,
