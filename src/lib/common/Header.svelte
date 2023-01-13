@@ -1,6 +1,7 @@
 <script>
 	import './nav.scss';
     import {     
+        Styles,
         Collapse,
         Navbar,
         NavbarToggler,
@@ -16,7 +17,7 @@
         isOpen = e.detail.isOpen;
     }
 </script>
-
+<Styles />
 <Navbar light expand="md">
     <NavbarBrand href="/">HybridiSpeksi</NavbarBrand>
     <NavbarToggler on:click={() => (isOpen = !isOpen)} />
