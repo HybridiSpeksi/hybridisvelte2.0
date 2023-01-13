@@ -81,9 +81,6 @@
             .text {
                 max-width: 95vw;
             }
-            p {
-                font-size: 1rem;
-            }
             img {
                 width: 60vw;
             }

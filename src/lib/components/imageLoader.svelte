@@ -20,14 +20,14 @@
 
 <IntersectionObserver once={true} let:intersecting={intersecting}>
     {#if intersecting}
-    <div on:click={()=>openImage()}>
+    <div on:click={()=>openImage()} on:keydown={()=>openImage()}>
         <Image {alt} {src}/>
     </div>
     {/if}
 </IntersectionObserver>
 
 
-<div class="popup" id="popup_{big_src}" on:click={()=>closeImage()}></div>
+<div class="popup" id="popup_{big_src}" on:click={()=>closeImage()} on:keydown={()=>closeImage()}></div>
 
 <style lang="scss">
     .popup {

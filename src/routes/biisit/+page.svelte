@@ -64,11 +64,6 @@
             // margin: 10px;
             font-size: 2rem;
         }
-        .speksi {
-            margin: 10px;
-            padding-left: 5px;
-            font-size: 1.5rem;
-        }
         .origin {
             margin: 10px;
             padding-left: 5px;
