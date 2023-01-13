@@ -7,18 +7,21 @@
     font-style: normal;
     font-weight: 500;
     src: url('../../../fonts/Cardinal.ttf');
+    font-display: swap;
 }
 @font-face {
     font-family: 'royalinitial';
     font-style: normal;
     font-weight: 500;
     src: url('../../../fonts/RoyalInitialen.ttf');
+    font-display: swap;
 }
 @font-face {
     font-family: 'hightower';
     font-style: normal;
     font-weight: 500;
     src: url('../../../fonts/HTOWERT.ttf');
+    font-display: swap;
 }
 :root {
   font-family: Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
