@@ -1,16 +1,9 @@
-<script lang="ts">
-    import { afterUpdate } from 'svelte';
+<script>
     import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
-    import type { PageData } from './$types';
 
-    export let data: PageData;
+    export let data;
 
-    afterUpdate(async () => {
-        document.getElementById('frontContent').innerHTML = documentToHtmlString(data.body.pageData.items[0].fields.blocks[0].fields.content)
-    })
-
-
-
+    let text = documentToHtmlString(data.pages[0].blocksCollection.items[0].content.json)
 </script>
 
 <!-- <section class="starfield">
@@ -20,7 +13,7 @@
 </section> -->
 <section class="wrap" >
     <div class="text" id="content">
-        <div id="frontContent"></div>
+        <div id="frontContent">{@html text}</div>
     </div>
 </section>
 

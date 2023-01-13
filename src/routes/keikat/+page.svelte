@@ -1,14 +1,10 @@
 <script>
-    import { afterUpdate } from 'svelte';
     import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 
-
     export let data;
-    afterUpdate(async () => {
-        document.getElementById('bandContent').innerHTML = documentToHtmlString(data.body.pageData.items[0].fields.blocks[0].fields.content)
-        document.getElementById('actorContent').innerHTML = documentToHtmlString(data.body.pageData.items[0].fields.blocks[1].fields.content)
-    })
-    
+
+    let text1 = documentToHtmlString(data.pages[0].blocksCollection.items[0].content.json)
+    let text2 = documentToHtmlString(data.pages[0].blocksCollection.items[1].content.json)
 </script>
 <svelte:head>
     <title>Tilaa esiintyjiä - HybridiSpeksi</title>
@@ -17,14 +13,13 @@
 <section class="wrap">
     <div class="text">
         <h1>Keik&shy;kail&shy;laanko?</h1>
-        <div class="cont" id="bandContent"></div>
+        <div class="cont" id="bandContent">{@html text1}</div>
         <div class="images">
             <img src="images/gigs/band_1_thumb.jpg" alt="Bändi 1"/>
             <img src="images/gigs/band_2_thumb.jpg" alt="Bändi 2"/>
             <img src="images/gigs/band_3_thumb.jpg" alt="Bändi 3"/>
         </div>
-        <!-- <img src="logo.png" alt="HybridiSpeksin logo"/> -->
-        <div class="cont" id="actorContent"></div>
+        <div class="cont" id="actorContent">{@html text2}</div>
         <div class="images">
             <img src="images/gigs/actors_1_thumb.jpg" alt="Esiintyjiä"/>
         </div>

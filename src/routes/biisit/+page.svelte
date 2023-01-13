@@ -1,9 +1,6 @@
-<script lang="ts">
-  import { each } from 'svelte/internal';
-    import type { PageData } from './$types';
-    
-    export let data: PageData;
-    let songs = data.body?.pageData.items[0]?.fields?.data
+<script>
+    export let data;
+    let songs = data.songData.items[0].data
 
     let selectedSong = songs[0];
     let selectedYear = '9999';

@@ -1,21 +1,43 @@
+import { error } from '@sveltejs/kit'
 import type { LayoutServerLoad } from './$types';
-import { client } from '$lib/contentfulClient'
+import contentfulFetch from '$lib/contentful-fetch'
 
 export const load: LayoutServerLoad = async ({ url }) => {
-    const pageData = await client.getEntries({
-        content_type: 'page',
-        'fields.uid[in]': url.pathname == '/' ? 'etusivu' : url.pathname.substring(1)
-    });
-    if (pageData) {
-        return {
-            status: 200,
-            body: {
-                pageData
+    const query = `
+    {
+        pageCollection (where: {
+            uid: "${url.pathname == '/' ? 'etusivu' : url.pathname.substring(1)}"
+        }) {
+            items {
+                title
+                uid
+                blocksCollection {
+                    items {
+                        content {
+                            json
+                        }
+                    }
+                }
             }
-        };
+        }
+    }
+    `
+    const response = await contentfulFetch(query);
+    if (!response.ok) {
+        throw error(404, {
+            message: response.statusText
+        })
     }
 
+    const { data } = await response.json()
+    const { items } = data.pageCollection
+
     return {
-        status: 404
+        pages: items.map((e) => {
+            return {
+                ...e
+            }
+        })
     }
+
 }

@@ -1,23 +1,20 @@
 <script>
-    import { onMount } from 'svelte';
     import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
+    import logo from '$lib/img/logo.png';
 
     export let data;
-    
-    onMount(async () => {
-        document.getElementById('content').innerHTML = documentToHtmlString(data.body.pageData.items[0].fields.blocks[0].fields.content)
-    })
-    
+
+    let text = documentToHtmlString(data.pages[0].blocksCollection.items[0].content.json)
 </script>
 <svelte:head>
-    <title>{data.body.pageData.items[0].fields.title}</title>
+    <title>Speksistä - HybridiSpeksi</title>
     <meta name="description" content="Speksistä ja HybridiSpeksistä" />
 </svelte:head>
 
 <section class="wrap">
-    <img class="logo" src="./logo.png" alt="" />
+    <img class="logo" src="{logo}" alt="HybridiSpeksin logo" />
     <div class="text">
-        <div id="content"></div>
+        <div id="content">{@html text}</div>
             <div class="speksit">
                 <a href="https://spex.abo.fi/">
                     <img src="./logos/speksit/abospex.svg" alt="Akademiska Spexet"/>

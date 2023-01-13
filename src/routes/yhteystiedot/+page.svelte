@@ -1,12 +1,9 @@
-<script lang="ts">
+<script>
     import Fa from 'svelte-fa/src/fa.svelte';
     import { faExternalLink } from '@fortawesome/free-solid-svg-icons'
-    import type { PageData } from './$types';
 
-    export let data: PageData;
-    let orgData = data.body?.pageData.items[0].fields?.data;
-    
-
+    export let data;
+    let orgData = data.orgData.items[0].data;
 </script>
 <svelte:head>
     <title>Yhteystiedot - HybridiSpeksi</title>
