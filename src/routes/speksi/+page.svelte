@@ -70,6 +70,7 @@
         }
         .logo {
             width: 30vw;
+            height: 30vw;
         }
         @media only screen and (max-width: 767px) {
             .text {
@@ -80,6 +81,7 @@
             }
             .logo {
                 width: 60vw;
+                height: 60vw;
             }
         }
     }
@@ -98,6 +100,7 @@
         }
         img {
             width: 150px;
+            height: 150px;
         }
     }
 </style>
