@@ -1,6 +1,12 @@
 <script>
     import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
-
+    import kreivilogo from '$lib/img/kreivi_logo.png';
+    import cannon from '$lib/img/cannon.png'
+    import castle from '$lib/img/castle.png'
+    import crab from '$lib/img/crab.png'
+    import heart from '$lib/img/heart.png'
+    import stars from '$lib/img/stars.png'
+    import horse from '$lib/img/horse.png'
     export let data;
 
     let text = documentToHtmlString(data.pages[0].blocksCollection.items[0].content.json)
@@ -9,11 +15,25 @@
     <title>HybridiSpeksi</title>
     <meta name="description" content="HybridiSpeksi on Turun yliopiston luonnontieteiden ja tekniikan opiskelijoiden vuosittain toteuttama teatteriproduktio." />
 </svelte:head>
-<!-- <section class="starfield">
+
+<section class="banner">
 	<div class="welcome">
-		<img src="gold_logo.png" alt="Welcome" draggable=false />
+		<img src="{kreivilogo}" alt="Welcome" draggable=false />
 	</div>
-</section> -->
+</section>
+<div class="drawings">
+    <div class="left">
+        <div class="smallimg" style="margin-top: 100px; padding-left: 100px"><img src="{castle}" alt="castle doodle"/></div>
+        <div class="smallimg" style="padding-bottom: 300px"><img src="{cannon}" alt="cannon doodle"/></div>
+        <div class="smallimg" style="margin-bottom: 100px"><img src="{crab}" alt="crab doodle"/></div>
+    </div>
+    <div class="right">
+        <div class="smallimg" style="padding-right: 50px"><img src="{heart}" alt="heart doodle"/></div>
+        <div class="smallimg" style="padding-left: 150px"><img src="{stars}" alt="stars doodle"/></div>
+        <div class="smallimg" style="padding-left: 150px; margin-bottom: -50px"><img src="{horse}" alt="horse doodle"/></div>
+    </div>
+</div>
+
 <section class="wrap" >
     <div class="text" id="content">
         <div id="frontContent">{@html text}</div>
@@ -27,7 +47,8 @@
 		justify-content: center;
 		align-items: center;
         background-color: $color-kreivi-white;
-        &.starfield {
+        background: url('$lib/img/paper_bkg.jpg');
+        &.banner {
             z-index: -1;
             :global(.container) {
                 max-width: 2000px!important;
@@ -48,7 +69,7 @@
             z-index: 1;
             img {
 				z-index: 1;
-				height: 70vh;
+				height: 40vh;
                 margin: 4rem 0;
                 @media (max-width: 800px) {
                     height: 100%;
@@ -107,4 +128,34 @@
             }
         }
 	}
+    .drawings {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: 180%;
+        z-index: 1;
+        .left {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .right {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .smallimg {
+            margin-top: 200px;
+            img {
+                width: 15vw;
+            }
+        }
+        @media (max-width: 900px) {
+            display: none;
+        }
+    }
 </style>
