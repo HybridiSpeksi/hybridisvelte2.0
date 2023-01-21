@@ -16,43 +16,42 @@
     <meta name="description" content="HybridiSpeksi on Turun yliopiston luonnontieteiden ja tekniikan opiskelijoiden vuosittain toteuttama teatteriproduktio." />
 </svelte:head>
 
-<section class="banner">
-	<div class="welcome">
-		<img src="{kreivilogo}" alt="Welcome" draggable=false />
-	</div>
-</section>
-<div class="drawings">
-    <div class="left">
-        <div class="smallimg" style="margin-top: 100px; padding-left: 100px"><img src="{castle}" alt="castle doodle"/></div>
-        <div class="smallimg" style="padding-bottom: 300px"><img src="{cannon}" alt="cannon doodle"/></div>
-        <div class="smallimg" style="margin-bottom: 100px"><img src="{crab}" alt="crab doodle"/></div>
+<div class="wrap">
+    <section class="banner">
+        <div class="welcome">
+            <img src="{kreivilogo}" alt="Welcome" draggable=false />
+        </div>
+    </section>
+
+    <div class="drawings">
+        <div class="left">
+            <div class="smallimg" style="margin-top: 100px; padding-left: 100px"><img src="{castle}" alt="castle doodle"/></div>
+            <div class="smallimg" style="padding-bottom: 20px"><img src="{cannon}" alt="cannon doodle"/></div>
+            <div class="smallimg" style=""><img src="{crab}" alt="crab doodle"/></div>
+        </div>
+        <div class="right">
+            <div class="smallimg" style="padding-right: 50px"><img src="{heart}" alt="heart doodle"/></div>
+            <div class="smallimg" style="padding-left: 150px"><img src="{stars}" alt="stars doodle"/></div>
+            <div class="smallimg" style="padding-left: 150px; padding-bottom: 80px"><img src="{horse}" alt="horse doodle"/></div>
+        </div>
     </div>
-    <div class="right">
-        <div class="smallimg" style="padding-right: 50px"><img src="{heart}" alt="heart doodle"/></div>
-        <div class="smallimg" style="padding-left: 150px"><img src="{stars}" alt="stars doodle"/></div>
-        <div class="smallimg" style="padding-left: 150px; padding-bottom: 80px"><img src="{horse}" alt="horse doodle"/></div>
-    </div>
+
+    <section class="wrap" >
+        <div class="text" id="content">
+            <div id="frontContent">{@html text}</div>
+        </div>
+    </section>
 </div>
 
-<section class="wrap" >
-    <div class="text" id="content">
-        <div id="frontContent">{@html text}</div>
-    </div>
-</section>
-
 <style lang="scss">
+    div.wrap {
+        background: url('$lib/img/paper_bkg.jpg');
+    }
 	section {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-        // background-color: $color-kreivi-white;
-        // background: url('$lib/img/paper_bkg.jpg');
-        &.banner {
-            :global(.container) {
-                max-width: 2000px!important;
-            }
-        }
         &.wrap {
             position: relative;
             width: 100%;
@@ -65,7 +64,7 @@
 			align-items: center;
 			position: relative;
 			max-width: 80%;
-            z-index: 1;
+            z-index: 10;
             img {
 				z-index: 1;
 				height: 40vh;
@@ -88,6 +87,7 @@
             padding: 4rem;
             box-shadow: 2px 3px 20px black, 0 0 125px #8f5922 inset;
             background: #fffef0;
+            z-index: 10;
             :global(*) {
                 color: $color-kreivi-dark;
                 max-width: 55vw;
@@ -133,8 +133,9 @@
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
-        height: 180%;
+        height: 100%;
         z-index: 1;
+        top: 0;
         .left {
             position: relative;
             display: flex;

@@ -43,10 +43,8 @@
         flex-direction: column;
         align-items: center;
         color: $color-nav-font;
-        // background: url('$lib/img/paper_bkg.jpg');
-        margin-top: auto;
-        bottom: 0;  
-        color: $color-nav-icon;
+        background: $color-nav;
+        bottom: 0;
         .icon {
             width: 4.5rem;
             height: 4.5rem;

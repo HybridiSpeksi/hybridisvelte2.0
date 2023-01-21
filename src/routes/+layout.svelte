@@ -6,18 +6,14 @@
 
     export let data: LayoutData;
 </script>
-<div>
-    <Header />
-    <main>
-        <slot pageData={data}/>
-    </main>
-    <Footer />
-</div>
+
+<Header />
+<main>
+    <slot pageData={data}/>
+</main>
+<Footer />
 
 <style>
-div {
-    background: url('$lib/img/paper_bkg.jpg');
-}
 main {
     flex: 1;
     display: flex;
