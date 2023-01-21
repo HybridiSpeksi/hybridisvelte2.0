@@ -43,14 +43,15 @@
         flex-direction: column;
         align-items: center;
         color: $color-nav-font;
-        background: $color-nav;
+        // background: url('$lib/img/paper_bkg.jpg');
         margin-top: auto;
         bottom: 0;  
-    .icon {
-        width: 4.5rem;
-        height: 4.5rem;
-        margin: 0.7rem;
-        fill: $color-nav-icon;
+        color: $color-nav-icon;
+        .icon {
+            width: 4.5rem;
+            height: 4.5rem;
+            margin: 0.7rem;
+            fill: $color-nav-icon;
         }
     }
 </style>

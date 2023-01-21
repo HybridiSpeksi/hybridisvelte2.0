@@ -30,7 +30,7 @@
     <div class="right">
         <div class="smallimg" style="padding-right: 50px"><img src="{heart}" alt="heart doodle"/></div>
         <div class="smallimg" style="padding-left: 150px"><img src="{stars}" alt="stars doodle"/></div>
-        <div class="smallimg" style="padding-left: 150px; margin-bottom: -50px"><img src="{horse}" alt="horse doodle"/></div>
+        <div class="smallimg" style="padding-left: 150px; padding-bottom: 80px"><img src="{horse}" alt="horse doodle"/></div>
     </div>
 </div>
 
@@ -46,10 +46,9 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-        background-color: $color-kreivi-white;
-        background: url('$lib/img/paper_bkg.jpg');
+        // background-color: $color-kreivi-white;
+        // background: url('$lib/img/paper_bkg.jpg');
         &.banner {
-            z-index: -1;
             :global(.container) {
                 max-width: 2000px!important;
             }
