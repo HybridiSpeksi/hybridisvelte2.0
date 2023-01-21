@@ -8,6 +8,8 @@ export const load: PageServerLoad = async () => {
     {
         produktioCollection {
             items {
+                nimi
+                year
                 biisitCollection {
                     items {
                         ...on Biisi {
