@@ -4,7 +4,7 @@
 
     import rules from '$lib/assets/HybridiSpeksi ry säännöt.pdf'
     import register from '$lib/assets/HybridiSpeksi ry rekisteriseloste.pdf'
-    import medals from '$lib/HybridiSpeksi ry merkkiohjesääntö.pdf'
+    import medals from '$lib/assets/HybridiSpeksi ry merkkiohjesääntö.pdf'
 
     export let data;
     let orgData = data.orgData.items[0].data;
@@ -25,7 +25,7 @@
                 {person.text} <a href="{person.link}" target="_blank" rel="noreferrer">
                     linkki lomakkeeseen</a> <Fa icon={faExternalLink} />
             </span>
-        </li>        
+        </li>
         {:else}
         <li>
             <span class="left">{person.name}</span>
