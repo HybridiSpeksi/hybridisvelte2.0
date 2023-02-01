@@ -2,6 +2,10 @@
     import Fa from 'svelte-fa/src/fa.svelte';
     import { faExternalLink } from '@fortawesome/free-solid-svg-icons'
 
+    import rules from '$lib/assets/HybridiSpeksi ry säännöt.pdf'
+    import register from '$lib/assets/HybridiSpeksi ry rekisteriseloste.pdf'
+    import medals from '$lib/HybridiSpeksi ry merkkiohjesääntö.pdf'
+
     export let data;
     let orgData = data.orgData.items[0].data;
 </script>
@@ -31,6 +35,11 @@
     {/each}
     </ul>
     {/each}
+    <div id="rules">
+        <a href={rules}>Yhdistyksen säännöt</a>
+        <a href={register}>Rekisteriseloste</a>
+        <a href={medals}>Merkkiohjesääntö</a>
+    </div>
 </section>
 
 <style lang="scss">
@@ -80,6 +89,13 @@
                     }
                 }
             }
+        }
+    }
+    #rules {
+        display: flex;
+        justify-content: center;
+        a {
+            padding: 20px;
         }
     }
 </style>
