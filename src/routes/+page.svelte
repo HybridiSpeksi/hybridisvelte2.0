@@ -166,7 +166,9 @@
         .youtube {
             a {
                 display: flex;
+                justify-content: center;
                 position: relative;
+                margin: 2rem auto;
                 img {
                     width: 720px;
                     box-shadow: 2px 3px 20px black, 0 0 125px #8f5922 inset;
@@ -183,6 +185,14 @@
                 }            
                 &:hover {
                     scale: 1.05;
+                }
+                @media (max-width: 600px) {
+                    img {
+                        width: 80%;
+                    }
+                    svg {
+                        width: 100px;
+                    }
                 }
             }
             
