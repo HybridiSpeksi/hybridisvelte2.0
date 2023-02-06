@@ -7,9 +7,11 @@
     import heart from '$lib/img/heart.png'
     import stars from '$lib/img/stars.png'
     import horse from '$lib/img/horse.png'
+    import teaser from '$lib/img/teaser.png'
     export let data;
 
     let text = documentToHtmlString(data.pages[0].blocksCollection.items[0].content.json)
+    let text2 = documentToHtmlString(data.pages[0].blocksCollection.items[1].content.json)
 </script>
 <svelte:head>
     <title>HybridiSpeksi</title>
@@ -37,8 +39,19 @@
     </div>
 
     <section class="wrap" >
-        <div class="text" id="content">
+        <div class="text">
             <div id="frontContent">{@html text}</div>
+        </div>
+        <div class="youtube">
+            <a href="https://www.youtube.com/watch?v=c3ozXZcZhsg">
+                <img src={teaser} alt="Link to teaser on Youtube" />
+                <svg class="icon icon__youtube" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 202.3 141.6" height="200" width="200" >
+                    <path d="M101.2.3S38 .3 22.1 4.4C13.8 6.8 6.7 13.8 4.3 22.1.2 38 .2 71.1.2 71.1s0 33.1 4.1 48.4c2.4 8.9 9.4 15.3 17.7 17.7 15.9 4.1 79.1 4.1 79.1 4.1s63.2 0 79.1-4.1c8.9-2.4 15.3-8.9 17.7-17.7 4.1-15.9 4.1-48.4 4.1-48.4s0-33.1-4.1-49c-2.4-8.9-8.9-15.3-17.7-17.7-15.9-4.1-79-4.1-79-4.1zM81.1 41l52.5 30.1-52.5 30.1V41z"/>
+                </svg>
+            </a>
+        </div>
+        <div class="text">
+            <div id="frontContent">{@html text2}</div>
         </div>
     </section>
 </div>
@@ -88,6 +101,10 @@
             box-shadow: 2px 3px 20px black, 0 0 125px #8f5922 inset;
             background: #fffef0;
             z-index: 10;
+            :global(ul) {
+                margin: auto;
+                list-style: lower-roman;
+            }
             :global(*) {
                 color: $color-kreivi-dark;
                 max-width: 55vw;
@@ -95,9 +112,23 @@
                 text-align: center;
                 font-family: 'hightower';
             }   
+            :global(h1) {
+                font-family: 'cardinal';
+                font-size: 3rem;
+                font-weight: 400;
+                margin: 25px;
+            }
+            :global(h1::first-letter) {
+                // font-family:'chomsky';
+                font-size: 5rem;
+                text-shadow: 1px 1px 1px #000;
+                margin: 0 .5rem;
+            }
             :global(h2) {
                 font-family: 'cardinal';
                 font-size: 3rem;
+                font-weight: 400;
+                margin: 25px;
             }
             :global(h2::first-letter) {
                 // font-family:'chomsky';
@@ -121,10 +152,40 @@
                     max-width: 80vw;
                     font-size: 1.1rem;
                 }   
-                :global(h2) {
-                    font-size: 2rem;
+                :global(h1) {
+                    text-align: center;
+                    margin: 2rem auto;
+                }
+                :global(h1::first-letter) {                    
+                    margin-left: -0.8rem;
+                    // font-size: 3rem;
+
                 }
             }
+        }
+        .youtube {
+            a {
+                display: flex;
+                position: relative;
+                img {
+                    width: 720px;
+                    box-shadow: 2px 3px 20px black, 0 0 125px #8f5922 inset;
+                }
+                svg {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    -ms-transform: translate(-50%,-50%);
+                    -moz-transform:translate(-50%,-50%);
+                    -webkit-transform: translate(-50%,-50%);
+                    transform: translate(-50%,-50%);
+                    fill: red;
+                }            
+                &:hover {
+                    scale: 1.05;
+                }
+            }
+            
         }
 	}
     .drawings {
