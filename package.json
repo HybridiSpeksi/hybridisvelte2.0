@@ -29,6 +29,6 @@
     "contentful": "^9.3.2",
     "npm-check-updates": "^16.7.4",
     "svelte-fa": "^3.0.3",
-    "sveltestrap": "^5.10.0",
+    "sveltestrap": "^5.10.0"
   }
 }
