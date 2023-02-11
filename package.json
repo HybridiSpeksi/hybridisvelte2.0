@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "2.0.0",
+    "@sveltejs/adapter-netlify": "^2.0.3",
     "@sveltejs/kit": "1.5.5",
     "@types/cookie": "^0.5.1",
     "sass": "^1.58.0",
@@ -25,12 +26,9 @@
     "@contentful/rich-text-html-renderer": "^16.0.2",
     "@fontsource/fira-mono": "^4.5.10",
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
-    "@sveltejs/adapter-netlify": "^2.0.3",
     "contentful": "^9.3.2",
     "npm-check-updates": "^16.7.4",
-    "svelte-cubed": "^0.2.1",
     "svelte-fa": "^3.0.3",
     "sveltestrap": "^5.10.0",
-    "three": "^0.149.0"
   }
 }
