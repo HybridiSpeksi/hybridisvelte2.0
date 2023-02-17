@@ -315,14 +315,15 @@
         "id": "kreivi",
         "name": "Kreivin aikaan",
         "year": 2023,
-        "poster": "kreivi_poster.jpg",
+        "poster": "kreivi_poster_thumb.jpg",
         "banner": "kreivi_banner.jpg",
         "statistics": [
-          { "Ensi-ilta": "TBA" },
-          { "Näytöksiä": "TBA" },
-          { "Teatteri": "TBA" },
+          { "Ensi-ilta": "15.3." },
+          { "Näytöksiä": "9" },
+          { "Kiertueita": "1"},
+          { "Teatteri": "Manilla" },
           { "Katsojia": "N/A" },
-          { "Produktiossa mukana": ">5" }
+          { "Produktiossa mukana": "134" }
         ],
         "generateText": true,
         "text": [
@@ -333,12 +334,21 @@
             "Mutta kuka on mystinen muukalainen tupsulakissa, ja mitä hän tekee rapukulhossa?!"
         ],
         "images": 0,
-        "resources": [],
+        "resources": [
+            {
+            "title": "Teaseri",
+            "url": "https://www.youtube.com/watch?v=c3ozXZcZhsg"
+            },
+            {
+                "title": "Promobilevideo",
+                "url": "https://www.youtube.com/watch?v=Gokyb1k0uSI"
+            }
+        ],
         "colors": {
-          "bg1": "#ca4fec",
-          "bg2": "#00ffbf",
-          "button": "#ca4fec",
-          "buttonColor": "#00ffbf"
+          "bg1": "#ad2023",
+          "bg2": "#1557ad",
+          "button": "#ad2023",
+          "buttonColor": "#fffade"
         }
     }
   
