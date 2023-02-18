@@ -6,7 +6,7 @@ import contentfulFetch from '$lib/contentful-fetch';
 export const load: PageServerLoad = async () => {
     const query = `
     {
-        produktioCollection {
+        produktioCollection (order: [year_DESC]) {
             items {
                 nimi
                 year
