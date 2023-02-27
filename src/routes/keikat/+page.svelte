@@ -24,6 +24,7 @@
         <div class="images">
             <img src="images/gigs/actors_1_thumb.jpg" alt="Esiintyjiä"/>
         </div>
+        Tanssijat
         <div class="cont" id="danceContent">{@html text3}</div>
     </div>
 </section>
