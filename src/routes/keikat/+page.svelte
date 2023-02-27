@@ -5,6 +5,7 @@
 
     let text1 = documentToHtmlString(data.pages[0].blocksCollection.items[0].content.json)
     let text2 = documentToHtmlString(data.pages[0].blocksCollection.items[1].content.json)
+    let text3 = documentToHtmlString(data.pages[0].blocksCollection.items[2].content.json)
 </script>
 <svelte:head>
     <title>Tilaa esiintyjiä - HybridiSpeksi</title>
@@ -23,7 +24,8 @@
         <div class="images">
             <img src="images/gigs/actors_1_thumb.jpg" alt="Esiintyjiä"/>
         </div>
-    </div>  
+        <div class="cont" id="danceContent">{@html text3}</div>
+    </div>
 </section>
 
 <style lang="scss">
