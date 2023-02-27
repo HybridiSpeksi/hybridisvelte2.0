@@ -12,6 +12,17 @@
 
     let text = documentToHtmlString(data.pages[0].blocksCollection.items[0].content.json)
     let text2 = documentToHtmlString(data.pages[0].blocksCollection.items[1].content.json)
+    
+    let sponsors = [
+        'aaly.svg',
+        'campussport.jpg',
+        'jouluristeily.png',
+        'loimu.jpg',
+        'punanaamio.png',
+        'tek.png',
+        'tiviagold.png'
+    ]
+
 </script>
 <svelte:head>
     <title>HybridiSpeksi</title>
@@ -52,6 +63,17 @@
         </div>
         <div class="text">
             <div id="frontContent">{@html text2}</div>
+        </div>
+    </section>
+    
+    <section class="wrap">
+        <div class="text">
+            <h2>Yhteistyössä</h2>
+            <div class="sponsors">
+                {#each sponsors as sponsor}
+                <img src={"/images/sponsors/"+sponsor} alt="{sponsor} logo"/>
+                {/each}
+            </div>
         </div>
     </section>
 </div>
@@ -147,7 +169,7 @@
             @media (max-width: 600px){
                 width: 100%;
                 padding: 0;
-                margin-bottom: 0;
+                margin-bottom: 2rem;
                 :global(*) {
                     max-width: 80vw;
                     font-size: 1.1rem;
@@ -228,5 +250,23 @@
         @media (max-width: 900px) {
             display: none;
         }
+    }
+    .sponsors {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        img {
+            padding: 30px;
+            max-width: 250px;
+            height: 100%;
+            mix-blend-mode: multiply;
+            @media (max-width: 950px) {
+                padding: 10px;
+                max-width: 150px;
+            }
+        }
+
     }
 </style>
