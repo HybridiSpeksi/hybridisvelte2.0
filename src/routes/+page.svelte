@@ -262,6 +262,7 @@
             max-width: 250px;
             height: 100%;
             mix-blend-mode: multiply;
+            
             @media (max-width: 950px) {
                 padding: 10px;
                 max-width: 150px;
