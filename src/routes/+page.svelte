@@ -121,7 +121,7 @@
             margin: 2rem 0;
             padding: 4rem;
             box-shadow: 2px 3px 20px black, 0 0 125px #8f5922 inset;
-            background: #fffef0;
+            background: #fffef080;
             z-index: 10;
             :global(ul) {
                 margin: auto;
