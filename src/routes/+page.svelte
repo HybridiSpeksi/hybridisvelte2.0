@@ -20,6 +20,7 @@
         'loimu.jpg',
         'punanaamio.png',
         'tek.png',
+        'marilyn.png',
         'tiviagold.png'
     ]
 
@@ -68,6 +69,10 @@
     
     <section class="wrap">
         <div class="text">
+            <h2>Pääyhteistyökumppani</h2>
+            <div class="sponsors">
+                <img class="super" src="images/sponsors/axelhealth.png" alt="axel health logo" />
+            </div>
             <h2>Yhteistyössä</h2>
             <div class="sponsors">
                 {#each sponsors as sponsor}
@@ -262,6 +267,9 @@
             max-width: 250px;
             height: 100%;
             mix-blend-mode: multiply;
+            &.super {
+                max-width: 400px;
+            }
             
             @media (max-width: 950px) {
                 padding: 10px;
