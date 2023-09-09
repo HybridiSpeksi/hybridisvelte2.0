@@ -26,6 +26,7 @@
     "@contentful/rich-text-html-renderer": "^16.0.2",
     "@fontsource/fira-mono": "^4.5.10",
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
+    "@sveltejs/adapter-vercel": "^3.0.3",
     "contentful": "^9.3.2",
     "npm-check-updates": "^16.7.4",
     "svelte-fa": "^3.0.3",
