@@ -33,7 +33,7 @@
             </svg>
         </a>
     </div>
-    <div>© 2022 HybridiSpeksi</div>
+    <div>© 2023 HybridiSpeksi</div>
 </section>
 
 <style lang="scss">
