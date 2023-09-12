@@ -23,7 +23,7 @@
     <Collapse {isOpen} navbar expand="md" on:update={handleUpdate}>
         <Nav class="ms-auto" navbar>
             <NavItem><NavLink href="/">Etusivu</NavLink></NavItem>
-            <!-- <NavItem><NavLink href="/rekry">Rekry</NavLink></NavItem>            -->
+            <NavItem><NavLink href="/rekry">Rekry</NavLink></NavItem>           
             <NavItem><NavLink href="/speksi">Speksi</NavLink></NavItem>            
             <NavItem><NavLink href="/historia">HybridiSpeksi</NavLink></NavItem>            
             <NavItem><NavLink href="/keikat">Keikat</NavLink></NavItem>           
