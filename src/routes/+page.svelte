@@ -9,7 +9,9 @@
         'punanaamio.png',
         'tek.png',
         'marilyn.png',
-        'tivia_blue.png'
+        'tivia_blue.png',
+        'tka.png',
+        'flama.png',
     ]
 
 </script>
@@ -68,10 +70,10 @@
             height: auto;
         }
         .welcome {
-            height: 50vh;
+            width: 70vw;
             padding-bottom: 50px;
             img {
-                height: 100%;
+                width: 100%;
             }
         }
 
